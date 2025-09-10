@@ -9,12 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --royal:#1554D1;            /* Royal Blue */
-      --bg:#f7f7f9;               /* very light gray background */
-      --panel:#ffffff;            /* white panels */
-      --text:#141414;             /* body text */
-      --muted:#555;               /* secondary text */
-      --line:#e6e6ee;             /* soft borders */
+      --royal:#1554D1;            
+      --bg:#f7f7f9;               
+      --panel:#f0f5ff;            /* pale royal blue tint */
+      --panel-border:#d0dbf9;
+      --text:#141414;             
+      --muted:#555;               
+      --line:#e6e6ee;             
     }
     *{box-sizing:border-box}
     html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif}
@@ -22,10 +23,10 @@
     .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
     .btn{display:inline-block;background:var(--royal);color:#fff;font-weight:700;padding:12px 18px;border-radius:12px}
     .btn.ghost{background:#eef2ff;border:1px solid #c7d2fe;color:#0f172a}
-    header{position:sticky;top:0;z-index:50;background:rgba(247,247,249,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    header{position:sticky;top:0;z-index:50;background:rgba(247,247,249,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     nav a{opacity:.85} nav a:hover{opacity:1}
     .grid{display:grid;gap:20px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
+    .card{background:var(--panel);border:1px solid var(--panel-border);border-radius:16px;padding:20px}
     .muted{color:var(--muted)}
     .section{padding:80px 0}
     .hero{
@@ -44,7 +45,6 @@
     .hero h1{font-size:48px;line-height:1.05;margin:0 0 10px 0;font-weight:800}
     .hero h1 span{color:#cfe0ff}
     .logo{display:flex;align-items:center;gap:12px}
-    .logo svg{height:34px;width:34px}
     input,select,textarea{
       width:100%;background:#fff;border:1px solid var(--line);color:#0f172a;
       padding:12px 14px;border-radius:12px;outline:none
@@ -65,10 +65,7 @@
   <header>
     <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;">
       <div class="logo" aria-label="Aerix Design logo">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aerix emblem">
-          <path d="M40 10 H56 L24 54 H8 Z" fill="#1554D1"/>
-          <path d="M24 10 H8 L40 54 H56 Z" fill="#0e0e0e"/>
-        </svg>
+        <img src="aerix-logo.png" alt="Aerix Design Logo" style="height:40px;width:auto"/>
         <strong style="letter-spacing:.2px">Aerix Design</strong>
       </div>
       <nav style="display:flex;gap:22px;font-size:14px">
@@ -118,42 +115,13 @@
       </div>
       <div class="grid cols-2">
         <!-- PCB Design & Layout -->
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="10" width="52" height="44" rx="8" fill="#fff" stroke="#e6e6ee"/>
-            <circle cx="22" cy="24" r="5" fill="#1554D1"/>
-            <circle cx="42" cy="24" r="5" fill="#1554D1"/>
-            <rect x="16" y="36" width="32" height="6" rx="3" fill="#1554D1" opacity=".85"/>
-          </svg>
-          <div><strong>PCB Design & Layout</strong><p class="muted">High-reliability design for avionics and rugged environments.</p></div>
-        </div>
+        <div class="card"><strong>PCB Design & Layout</strong><p class="muted">High-reliability design for avionics and rugged environments.</p></div>
         <!-- SMT / Through-Hole -->
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="12" width="48" height="40" rx="6" fill="#fff" stroke="#e6e6ee"/>
-            <rect x="16" y="20" width="12" height="24" rx="2" fill="#1554D1"/>
-            <rect x="36" y="20" width="12" height="24" rx="2" fill="#1554D1" opacity=".85"/>
-          </svg>
-          <div><strong>SMT / Through-Hole</strong><p class="muted">Fine-pitch, micro-BGA, mixed-tech builds.</p></div>
-        </div>
+        <div class="card"><strong>SMT / Through-Hole</strong><p class="muted">Fine-pitch, micro-BGA, mixed-tech builds.</p></div>
         <!-- Test Development -->
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="12" width="44" height="32" rx="6" fill="#fff" stroke="#e6e6ee"/>
-            <polyline points="14,34 24,26 34,32 50,22" fill="none" stroke="#1554D1" stroke-width="3"/>
-            <circle cx="50" cy="22" r="3" fill="#1554D1"/>
-          </svg>
-          <div><strong>Test Development</strong><p class="muted">ICT/FCT, boundary-scan, environmental test plans.</p></div>
-        </div>
+        <div class="card"><strong>Test Development</strong><p class="muted">ICT/FCT, boundary-scan, environmental test plans.</p></div>
         <!-- Ruggedization -->
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <rect x="8" y="16" width="48" height="32" rx="8" fill="#fff" stroke="#e6e6ee"/>
-            <path d="M16 40 L24 28 L32 36 L40 24 L48 32" fill="none" stroke="#1554D1" stroke-width="3"/>
-            <rect x="12" y="20" width="40" height="24" rx="6" fill="none" stroke="#c7d2fe" stroke-dasharray="4 4"/>
-          </svg>
-          <div><strong>Ruggedization</strong><p class="muted">Conformal coat, potting, vibration & thermal design.</p></div>
-        </div>
+        <div class="card"><strong>Ruggedization</strong><p class="muted">Conformal coat, potting, vibration & thermal design.</p></div>
       </div>
     </div>
   </section>
