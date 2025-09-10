@@ -30,15 +30,15 @@
     .section{padding:80px 0}
     .hero{
       position:relative;min-height:64vh;display:flex;align-items:center;
-      background:#0b1a2e;
-      color:#fff;
+      background:#0b1a2e;color:#fff;
     }
     .hero .bg{
       position:absolute;inset:0;z-index:0;
       background:
-        linear-gradient(0deg,rgba(10,20,36,.55),rgba(10,20,36,.55)),
-        url('https://source.unsplash.com/1600x900/?fighter-jet,aerospace,defense');
-      background-size:cover;background-position:center;
+        linear-gradient(0deg,rgba(10,20,36,.35),rgba(10,20,36,.35)),
+        url('https://images.unsplash.com/photo-1519003300449-424ad0405076?auto=format&fit=crop&w=2000&q=80');
+      background-size:cover;
+      background-position:center 35%;
     }
     .hero .content{position:relative;z-index:1}
     .hero h1{font-size:48px;line-height:1.05;margin:0 0 10px 0;font-weight:800}
@@ -65,7 +65,6 @@
   <header>
     <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;">
       <div class="logo" aria-label="Aerix Design logo">
-        <!-- Inline SVG logo: Royal Blue + Black fits light background -->
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aerix emblem">
           <path d="M40 10 H56 L24 54 H8 Z" fill="#1554D1"/>
           <path d="M24 10 H8 L40 54 H56 Z" fill="#0e0e0e"/>
@@ -118,21 +117,41 @@
         </ul>
       </div>
       <div class="grid cols-2">
-        <!-- Small icon/photos (Unsplash stock) -->
+        <!-- PCB Design & Layout -->
         <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <img class="thumb" src="https://source.unsplash.com/80x80/?schematic,circuit" alt="PCB schematic icon" loading="lazy">
+          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="10" width="52" height="44" rx="8" fill="#fff" stroke="#e6e6ee"/>
+            <circle cx="22" cy="24" r="5" fill="#1554D1"/>
+            <circle cx="42" cy="24" r="5" fill="#1554D1"/>
+            <rect x="16" y="36" width="32" height="6" rx="3" fill="#1554D1" opacity=".85"/>
+          </svg>
           <div><strong>PCB Design & Layout</strong><p class="muted">High-reliability design for avionics and rugged environments.</p></div>
         </div>
+        <!-- SMT / Through-Hole -->
         <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <img class="thumb" src="https://source.unsplash.com/80x80/?smt,pcb" alt="SMT assembly icon" loading="lazy">
+          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="12" width="48" height="40" rx="6" fill="#fff" stroke="#e6e6ee"/>
+            <rect x="16" y="20" width="12" height="24" rx="2" fill="#1554D1"/>
+            <rect x="36" y="20" width="12" height="24" rx="2" fill="#1554D1" opacity=".85"/>
+          </svg>
           <div><strong>SMT / Through-Hole</strong><p class="muted">Fine-pitch, micro-BGA, mixed-tech builds.</p></div>
         </div>
+        <!-- Test Development -->
         <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <img class="thumb" src="https://source.unsplash.com/80x80/?testing,electronics" alt="Testing icon" loading="lazy">
+          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="12" width="44" height="32" rx="6" fill="#fff" stroke="#e6e6ee"/>
+            <polyline points="14,34 24,26 34,32 50,22" fill="none" stroke="#1554D1" stroke-width="3"/>
+            <circle cx="50" cy="22" r="3" fill="#1554D1"/>
+          </svg>
           <div><strong>Test Development</strong><p class="muted">ICT/FCT, boundary-scan, environmental test plans.</p></div>
         </div>
+        <!-- Ruggedization -->
         <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <img class="thumb" src="https://source.unsplash.com/80x80/?military,hardware" alt="Ruggedization icon" loading="lazy">
+          <svg class="thumb" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="16" width="48" height="32" rx="8" fill="#fff" stroke="#e6e6ee"/>
+            <path d="M16 40 L24 28 L32 36 L40 24 L48 32" fill="none" stroke="#1554D1" stroke-width="3"/>
+            <rect x="12" y="20" width="40" height="24" rx="6" fill="none" stroke="#c7d2fe" stroke-dasharray="4 4"/>
+          </svg>
           <div><strong>Ruggedization</strong><p class="muted">Conformal coat, potting, vibration & thermal design.</p></div>
         </div>
       </div>
