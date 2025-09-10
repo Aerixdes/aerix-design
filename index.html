@@ -13,7 +13,7 @@
       --royal:#1554D1;
       --royal-2:#2A6AF2;
       --bg:#F7F7F9;
-      --panel:#EEF3FF;           /* pale royal blue panel */
+      --panel:#EEF3FF;
       --panel-border:#D0DBF9;
       --white:#FFFFFF;
       --text:#141414;
@@ -45,13 +45,12 @@
       position:absolute;inset:0;z-index:0;
       background:
         linear-gradient(0deg,rgba(10,20,36,.55),rgba(10,20,36,.55)),
-        url('hero-jet.jpg'); /* your local jet image */
+        url('hero-jet.jpg');
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
       filter:saturate(1.1) contrast(1.1);
     }
-    /* Animated CAD-style gradient overlay */
     .hero::after{
       content:"";
       position:absolute;inset:0;z-index:1;
@@ -73,18 +72,17 @@
     .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .chip{background:var(--chip);border:1px solid #cfe0ff;color:#0f2a66;padding:8px 12px;border-radius:999px;font-weight:600;font-size:13px}
 
-    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{display:block}
+
     input,select,textarea{width:100%;background:var(--white);border:1px solid var(--line);color:#0f172a;padding:12px 14px;border-radius:12px;outline:none}
     textarea{min-height:120px;resize:vertical}
 
     .thumb{width:44px;height:44px;border-radius:10px;border:1px solid var(--panel-border);background:var(--white);display:inline-flex;align-items:center;justify-content:center}
 
-    /* Program cards with image headers */
     .program{overflow:hidden;padding:0;background:var(--panel);border:1px solid var(--panel-border);border-radius:16px}
     .program .ph{height:140px;background-size:cover;background-position:center;border-bottom:1px solid var(--panel-border)}
     .program .pc{padding:18px}
 
-    /* CTA bar */
     .cta{background:linear-gradient(135deg,var(--royal),#3F83FF 60%, var(--royal-2));color:#fff;padding:36px 0}
 
     @media(min-width:900px){
@@ -100,12 +98,11 @@
 
   <!-- Top Bar -->
   <header>
-    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;">
-      <div class="logo" aria-label="Aerix Design logo">
-        <img src="aerix-logo.png" alt="Aerix Design Logo" style="height:40px;width:auto"/>
-        <strong style="letter-spacing:.2px">Aerix Design</strong>
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;">
+      <div class="logo" aria-label="Aerix Design logo" style="display:flex;align-items:center">
+        <img src="aerix-logo.png" alt="Aerix Design Logo" style="height:60px;width:auto"/>
       </div>
-      <nav style="display:flex;gap:22px;font-size:14px">
+      <nav style="display:flex;gap:28px;font-size:15px;align-items:center">
         <a href="#capabilities">Capabilities</a>
         <a href="#quality">Quality</a>
         <a href="#process">Process</a>
@@ -113,7 +110,7 @@
         <a href="#rfq">RFQ</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="btn" href="#rfq">Request a Quote</a>
+      <a class="btn" href="#rfq" style="align-self:center">Request a Quote</a>
     </div>
   </header>
 
@@ -158,77 +155,20 @@
           <li>Documentation: traveler, FAI/PPAP (as needed), CoC, serialized data packs</li>
         </ul>
       </div>
-
       <div class="grid cols-2">
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <span class="thumb">
-            <svg width="26" height="26" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="10" width="52" height="44" rx="8" fill="#fff" stroke="#C7D2FE"/>
-              <circle cx="22" cy="24" r="5" fill="#1554D1"/>
-              <circle cx="42" cy="24" r="5" fill="#1554D1"/>
-              <rect x="16" y="36" width="32" height="6" rx="3" fill="#2A6AF2" opacity=".9"/>
-            </svg>
-          </span>
-          <div><strong>PCB Design & Layout</strong><p class="muted">High-reliability design for avionics and rugged environments.</p></div>
-        </div>
-
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <span class="thumb">
-            <svg width="26" height="26" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="12" width="48" height="40" rx="6" fill="#fff" stroke="#C7D2FE"/>
-              <rect x="16" y="20" width="12" height="24" rx="2" fill="#1554D1"/>
-              <rect x="36" y="20" width="12" height="24" rx="2" fill="#2A6AF2"/>
-            </svg>
-          </span>
-          <div><strong>SMT / Through-Hole</strong><p class="muted">Fine-pitch, micro-BGA, mixed-tech builds.</p></div>
-        </div>
-
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <span class="thumb">
-            <svg width="26" height="26" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <rect x="10" y="12" width="44" height="32" rx="6" fill="#fff" stroke="#C7D2FE"/>
-              <polyline points="14,34 24,26 34,32 50,22" fill="none" stroke="#1554D1" stroke-width="3"/>
-              <circle cx="50" cy="22" r="3" fill="#2A6AF2"/>
-            </svg>
-          </span>
-          <div><strong>Test Development</strong><p class="muted">ICT/FCT, boundary-scan, environmental test plans.</p></div>
-        </div>
-
-        <div class="card" style="display:flex;gap:14px;align-items:flex-start">
-          <span class="thumb">
-            <svg width="26" height="26" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="16" width="48" height="32" rx="8" fill="#fff" stroke="#C7D2FE"/>
-              <path d="M16 40 L24 28 L32 36 L40 24 L48 32" fill="none" stroke="#1554D1" stroke-width="3"/>
-              <rect x="12" y="20" width="40" height="24" rx="6" fill="none" stroke="#9DB8FF" stroke-dasharray="4 4"/>
-            </svg>
-          </span>
-          <div><strong>Ruggedization</strong><p class="muted">Conformal coat, potting, vibration & thermal design.</p></div>
-        </div>
+        <div class="card"><strong>PCB Design & Layout</strong><p class="muted">High-reliability design for avionics and rugged environments.</p></div>
+        <div class="card"><strong>SMT / Through-Hole</strong><p class="muted">Fine-pitch, micro-BGA, mixed-tech builds.</p></div>
+        <div class="card"><strong>Test Development</strong><p class="muted">ICT/FCT, boundary-scan, environmental test plans.</p></div>
+        <div class="card"><strong>Ruggedization</strong><p class="muted">Conformal coat, potting, vibration & thermal design.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Quality & Compliance -->
+  <!-- Quality -->
   <section id="quality" class="section" style="background:#FFFFFF">
     <div class="wrap grid cols-2">
-      <div class="card">
-        <strong>Certifications (update with your actuals)</strong>
-        <ul class="muted" style="margin-top:10px;line-height:1.9">
-          <li>AS9100D / ISO 9001 (scope & registrar)</li>
-          <li>ITAR Registered (DDTC # if applicable)</li>
-          <li>J-STD-001 / IPC-A-610 trained personnel</li>
-          <li>CMMC alignment / NIST 800-171 controls (status)</li>
-        </ul>
-      </div>
-      <div class="card">
-        <strong>Security & Traceability</strong>
-        <ul class="muted" style="margin-top:10px;line-height:1.9">
-          <li>CUI handling procedures and access control</li>
-          <li>Serialized component & assembly tracking</li>
-          <li>AVL management & counterfeit risk mitigation</li>
-          <li>Secure file portal & NDA workflow</li>
-        </ul>
-      </div>
+      <div class="card"><strong>Certifications</strong><ul class="muted"><li>AS9100D / ISO 9001</li><li>ITAR Registered</li><li>J-STD-001 / IPC-A-610</li><li>CMMC / NIST 800-171</li></ul></div>
+      <div class="card"><strong>Security & Traceability</strong><ul class="muted"><li>CUI handling & access control</li><li>Serialized tracking</li><li>AVL management</li><li>Secure file portal & NDA workflow</li></ul></div>
     </div>
   </section>
 
@@ -238,36 +178,27 @@
       <h2 style="font-size:34px;margin:0 0 18px 0">How We Work</h2>
       <div class="grid cols-4">
         <div class="card"><strong>1. Discover</strong><p class="muted">Mission profile, requirements, constraints, export classification.</p></div>
-        <div class="card"><strong>2. Design</strong><p class="muted">Architecture, schematics, layout, DFM/DFT, reviews & approvals.</p></div>
+        <div class="card"><strong>2. Design</strong><p class="muted">Architecture, schematics, layout, reviews & approvals.</p></div>
         <div class="card"><strong>3. Build</strong><p class="muted">Secure sourcing, PCBA, firmware load, ESS.</p></div>
         <div class="card"><strong>4. Verify</strong><p class="muted">ICT/FCT, environmental, documentation pack, shipping.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Programs (image headers use fixed, non-random IDs) -->
+  <!-- Programs -->
   <section id="programs" class="section" style="background:#FFFFFF">
     <div class="wrap">
       <h2 style="font-size:34px;margin:0 0 18px 0">Representative Programs</h2>
-      <p class="muted">Non-ITAR, unclassified, and publicly shareable examples. Keep descriptions generic if under NDA.</p>
+      <p class="muted">Generic, non-ITAR examples.</p>
       <div class="grid cols-3" style="margin-top:18px">
-        <div class="program">
-          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=1200&q=80')"></div>
-          <div class="pc"><strong>Program 1</strong><p class="muted">Rugged avionics sensor module; reduced SWaP by 22%.</p></div>
-        </div>
-        <div class="program">
-          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80')"></div>
-          <div class="pc"><strong>Program 2</strong><p class="muted">Flight-ready power conditioning PCBA with DO-160 testing.</p></div>
-        </div>
-        <div class="program">
-          <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1200&q=80')"></div>
-          <div class="pc"><strong>Program 3</strong><p class="muted">Mission computer I/O board; improved MTBF +18%.</p></div>
-        </div>
+        <div class="program"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?auto=format&fit=crop&w=1200&q=80')"></div><div class="pc"><strong>Program 1</strong><p class="muted">Avionics sensor module.</p></div></div>
+        <div class="program"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1200&q=80')"></div><div class="pc"><strong>Program 2</strong><p class="muted">Flight-ready power conditioning PCBA.</p></div></div>
+        <div class="program"><div class="ph" style="background-image:url('https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1200&q=80')"></div><div class="pc"><strong>Program 3</strong><p class="muted">Mission computer I/O board.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA BAR -->
+  <!-- CTA -->
   <section class="cta">
     <div class="wrap" style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:space-between">
       <h3 style="margin:0;font-size:24px;font-weight:800">Ready to start your next mission-critical build?</h3>
@@ -283,42 +214,15 @@
     <div class="wrap grid cols-2">
       <div>
         <h2 style="font-size:34px;margin:0 0 10px 0">Request a Quote</h2>
-        <p class="muted">Share your requirements. We’ll respond within one business day with clarifying questions and a secure upload link for controlled data.</p>
         <form style="margin-top:16px" onsubmit="event.preventDefault(); alert('Thanks! We will follow up shortly.');">
-          <div class="grid cols-2">
-            <input placeholder="Name" required />
-            <input placeholder="Company" />
-          </div>
-          <div class="grid cols-2" style="margin-top:12px">
-            <input type="email" placeholder="Work Email" required />
-            <input placeholder="Phone (optional)" />
-          </div>
-          <textarea style="margin-top:12px" placeholder="Project overview (scope, volumes, environment, compliance)"></textarea>
-          <div class="grid cols-2" style="margin-top:12px">
-            <select>
-              <option>Build Type</option><option>Design Only</option><option>NPI / Prototype</option><option>Low-Volume Production</option><option>Sustainment</option>
-            </select>
-            <select>
-              <option>Export Classification</option><option>Unknown / TBD</option><option>EAR99</option><option>EAR (600-series)</option><option>ITAR</option>
-            </select>
-          </div>
-          <label class="muted" style="display:flex;gap:8px;align-items:center;margin-top:12px;font-size:14px">
-            <input type="checkbox" required /> I acknowledge that no ITAR/EAR-controlled technical data will be uploaded via this form.
-          </label>
+          <div class="grid cols-2"><input placeholder="Name" required /><input placeholder="Company" /></div>
+          <div class="grid cols-2" style="margin-top:12px"><input type="email" placeholder="Work Email" required /><input placeholder="Phone (optional)" /></div>
+          <textarea style="margin-top:12px" placeholder="Project overview"></textarea>
+          <div class="grid cols-2" style="margin-top:12px"><select><option>Build Type</option></select><select><option>Export Classification</option></select></div>
           <button class="btn" style="margin-top:12px" type="submit">Submit RFQ</button>
-          <p class="muted" style="font-size:12px;margin-top:8px">After submission, we will provide a secure portal for document exchange and, if needed, execute an NDA.</p>
         </form>
       </div>
-      <div class="card">
-        <strong>What to Include</strong>
-        <ul class="muted" style="margin-top:10px;line-height:1.9">
-          <li>Schematic/BoM/gerbers or requirements document</li>
-          <li>Target quantities & delivery windows</li>
-          <li>Environmental & reliability requirements (DO-160, MIL-STD-810, etc.)</li>
-          <li>Acceptance criteria & test strategy</li>
-          <li>Export classification and data handling constraints</li>
-        </ul>
-      </div>
+      <div class="card"><strong>What to Include</strong><ul class="muted"><li>Schematic/BoM/gerbers</li><li>Target quantities</li><li>Reliability requirements</li><li>Acceptance criteria</li></ul></div>
     </div>
   </section>
 
@@ -329,18 +233,14 @@
         <h2 style="font-size:26px;margin:0 0 10px 0">Contact</h2>
         <p class="muted">4408 Williamsburg Ave. Richmond, VA 23231</p>
         <p class="muted"><a href="mailto:ops@aerixdes.com" style="color:var(--royal);font-weight:600">ops@aerixdes.com</a></p>
-        <p class="muted" style="font-size:14px">Facility tours available by appointment. U.S. persons only for ITAR-restricted areas.</p>
+        <p class="muted" style="font-size:14px">Facility tours by appointment. U.S. persons only for ITAR-restricted areas.</p>
       </div>
-      <div class="card muted">
-        © <span id="yr"></span> Aerix Design. All rights reserved.
-      </div>
+      <div class="card muted">© <span id="yr"></span> Aerix Design. All rights reserved.</div>
     </div>
   </section>
 
   <footer>
-    <div class="wrap" style="padding:16px 0;color:#707070;font-size:14px;background:#fff">
-      aerixdes.com • Aerix Design
-    </div>
+    <div class="wrap" style="padding:16px 0;color:#707070;font-size:14px;background:#fff">aerixdes.com • Aerix Design</div>
   </footer>
 
   <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
